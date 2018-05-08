@@ -63,7 +63,6 @@ class ImageUpload extends Component {
     if(this.state.file != ""){
       axios.post("http://localhost:3001/user/uploadImage", formData, config)
       .then(function (response) {
-        debugger
         if(response.data.fileType != null){
           let user_detail = response.data.rows;
           console.log(response);

@@ -28,7 +28,6 @@ class AllUserBidProjects extends Component {
     var self = this;
     axios.post("http://localhost:3001/project/get_all_user_bid_projects", {user_id: user_id})
     .then(function (response) {
-      debugger
       if(response.data.rows != null){
         let user_detail = response.data.rows;
         console.log(response);

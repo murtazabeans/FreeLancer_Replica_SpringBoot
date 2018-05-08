@@ -79,7 +79,6 @@ class CreateProject extends Component {
       var self = this;
       axios.post("http://localhost:3001/project/createProject", formData, config)
       .then(function (response) {
-        debugger
         console.log(response);
         self.setState({
           title: '', 

@@ -28,7 +28,6 @@ class MyProjects extends Component {
     var self = this;
     axios.post("http://localhost:3001/project/get_all_user_published_projects", {user_id: user_id})
     .then(function (response) {
-      debugger
       if(response.data.rows != null){
         let user_detail = response.data.rows;
         console.log(response);
@@ -45,7 +44,6 @@ class MyProjects extends Component {
      let projectList;
     if(this.state.data != null){
       projectList = this.state.data.map(project => {
-        debugger
         return(
           <MyProject key = {project.id} freelancer_id= {project.freelancer_name} employer_id = {project.id}  project_name = {project.title} employer_name={project.owner} avg_bid={project.avg_days}
           project_id = {project.id} employer_id = {project.employer_id} assigned_to = {project.assigned_to} completion_date={project.date_of_completion}   />

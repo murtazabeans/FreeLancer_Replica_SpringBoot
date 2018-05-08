@@ -35,7 +35,6 @@ class UserProfileView extends Component {
     let id = localStorage.profile_id
     if( id != null){
       var self = this;
-      debugger
       axios.post("http://localhost:3001/user/get_user", {id: id})
       .then(function (response) {
         if(response.data.rows != null){

@@ -48,7 +48,6 @@ class ProjectView extends Component {
     let form_values = {project_id: localStorage.project_id, user_id: localStorage.user_id}
     axios.post("http://localhost:3001/bid/get-bid-value-for-user", form_values)
     .then(function (response) {
-      debugger
         if(response.data.data_present){
           self.setState({
             days: response.data.rows[0].number_of_days,
@@ -73,7 +72,6 @@ class ProjectView extends Component {
     let form_values = {user_id: localStorage.user_id, project_id: localStorage.project_id, no_of_days: this.state.days, price: this.state.price}
     axios.post("http://localhost:3001/bid/submit_bid", form_values)
     .then(function (response) {
-      debugger
         if(response.data.avgBid != undefined)
         {
           self.state.data.days = response.data.avgBid;

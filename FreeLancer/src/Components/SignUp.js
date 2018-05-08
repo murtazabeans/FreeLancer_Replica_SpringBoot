@@ -177,7 +177,6 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
   return{
     registerUser: (details) => {
-      debugger
       
     }
   }
