@@ -89,7 +89,7 @@ public class UserController {
         result.put("rows", user);
         result.put("data_present", user == null ? false : true);
 
-        return new ResponseEntity(result, HttpStatus.OK);
+        return new ResponseEntity(user, HttpStatus.OK);
 
     }
 
